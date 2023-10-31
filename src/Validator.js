@@ -1,17 +1,17 @@
-import StringValidator from "./StringSchema.js";
-import ArrayValidator from "./ArraySchema.js";
-import ObjectValidator from "./ObjectSchema.js";
+import StringValidator from './StringSchema.js';
+import ArrayValidator from './ArraySchema.js';
+import ObjectValidator from './ObjectSchema.js';
 
 export default class Validator {
-  string() {
+  static string() {
     return new StringValidator();
   }
 
-  array() {
+  static array() {
     return new ArrayValidator();
   }
 
-  object() {
+  static object() {
     return new ObjectValidator();
   }
 }

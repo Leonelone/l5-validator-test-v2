@@ -9,7 +9,7 @@ export default class ObjectValidator {
     return keys.every((key) => this.validator[key].isValid(object[key]));
   }
 
-  shape(object) {
+  static shape(object) {
     return new ObjectValidator(object);
   }
 }

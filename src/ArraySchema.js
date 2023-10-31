@@ -10,14 +10,15 @@ export default class ArrayValidator {
     if (depth > this.depthValue) {
       return false;
     }
-    for (const item of data) {
+    let isValid = true;
+    data.forEach((item) => {
       if (Array.isArray(item)) {
         if (!this.isValid(item, depth + 1)) {
-          return false;
+          isValid = false;
         }
       }
-    }
-    return true;
+    });
+    return isValid;
   }
 
   maxDepth(newValue) {
